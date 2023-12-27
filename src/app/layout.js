@@ -1,6 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.css';
-import './globals.css'
-import Navbar from '@/components/navbar';
+import './css/style.css'
 import Home from "./home";
 
 export const metadata = {
@@ -12,7 +11,6 @@ export default function RootLayout() {
     return (
       <html lang="en">
         <body>
-          <Navbar />
           <Home />
         </body>
       </html>
