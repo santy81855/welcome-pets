@@ -1,6 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.css';
-import './globals.css'
-import Navbar from '@/components/navbar';
+import './css/style.css'
 import Home from "./home";
 
 export const metadata = {
