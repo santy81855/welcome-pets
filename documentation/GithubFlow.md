@@ -42,7 +42,8 @@
         1.  Go to your development branch
             -   If it's for a new feature that doesn't have a branch yet:
                 ```bash
-                git checkout -b features/feature-name
+                git checkout features
+                git checkout -b feature-name
                 ```
                 -   As a side note, the first time you push changes to your new branch use the following method to push it upstream:
                 ```bash
