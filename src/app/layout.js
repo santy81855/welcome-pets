@@ -17,9 +17,9 @@ export default function RootLayout({
         <ClerkProvider>
             <html lang="en">
                 <body>
-                    <BootstrapClient />
                     <Navbar />
                     {children}
+                    <BootstrapClient />
                 </body>
             </html>
         </ClerkProvider>
