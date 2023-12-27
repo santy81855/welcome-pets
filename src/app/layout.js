@@ -1,5 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import './globals.css'
+import { ClerkProvider } from '@clerk/nextjs'
 import Navbar from '@/components/navbar';
 import Home from "./home";
 
@@ -12,11 +13,13 @@ export default function RootLayout({
     children,
 }) {
     return (
-        <html lang="en">
-            <body>
-                <Navbar />
-                {children}
-            </body>
-        </html>
+        <ClerkProvider>
+            <html lang="en">
+                <body>
+                    <Navbar />
+                    {children}
+                </body>
+            </html>
+        </ClerkProvider>
     );
 }
