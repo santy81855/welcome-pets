@@ -1,17 +1,15 @@
 "use client";
-import Image from "next/image";
+
+import BtnGrey from "./buttons/btnGrey";
+import BtnPrimary from "./buttons/btnPrimary";
+import Logo from "./logo";
 
 export default function Navbar() {
     return (
       <nav className="navbar navbar-expand-lg bg-light">
         <div className="container">
           <a className="navbar-brand" href="#">
-            <Image
-              src="/images/logos/logo.svg"
-              alt="Logo"
-              width={180}
-              height={80}
-            />
+            <Logo/>
           </a>
           <button
             className="navbar-toggler"
@@ -48,12 +46,8 @@ export default function Navbar() {
               </li>
             </ul>
             <div className="d-flex gap-3">
-              <button className="btn brand-btn-grey" type="submit">
-                Sign In
-              </button>
-              <button className="btn brand-btn" type="submit">
-                Register
-              </button>
+              <BtnGrey text="Login"/>
+              <BtnPrimary text="Register"/>
             </div>
           </div>
         </div>
