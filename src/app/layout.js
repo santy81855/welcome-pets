@@ -3,6 +3,7 @@ import './css/style.css'
 import './globals.css'
 import { ClerkProvider } from '@clerk/nextjs'
 import BootstrapClient from '@/components/Bootstrap/BootstrapClient';
+import Navbar from '@/components/navbar';
 
 export const metadata = {
     title: 'Welcome Pets',
@@ -16,6 +17,7 @@ export default function RootLayout({
         <ClerkProvider>
             <html lang="en">
                 <body>
+                    <Navbar />
                     {children}
                     <BootstrapClient />
                 </body>
