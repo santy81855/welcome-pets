@@ -1,5 +1,5 @@
-import IconList from "./iconList";
-import BtnHero from "./buttons/btnHero";
+import IconList from "../iconsList/iconList";
+import BtnHero from "../buttons/btnHero";
 import Image from "next/image";
 
 export default function Hero() {

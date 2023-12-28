@@ -1,8 +1,8 @@
 "use client";
 
-import BtnGrey from "./buttons/btnGrey";
-import BtnPrimary from "./buttons/btnPrimary";
-import Logo from "./logo";
+import BtnGrey from "../buttons/btnGrey";
+import BtnPrimary from "../buttons/btnPrimary";
+import Logo from "../logo/logo";
 
 export default function Navbar() {
     return (
