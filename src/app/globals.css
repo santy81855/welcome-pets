@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap");
 
 :root {
     --max-width: 1200px;
     --doc-height: 100%;
-    --nav-height: 65px;
+    --nav-height: 100px;
     --border-radius: 25px;
     --background-color-rgb: 255, 255, 255;
     --text-color-rgb: 41, 41, 41;
@@ -28,16 +28,16 @@
     --gap-large: 2rem;
     --gap-xlarge: 3rem;
     --gap-x2large: 4rem;
-    --primary-color: #E74B4C !important;
+    --primary-color: #e74b4c !important;
     --secondary-color: #424242 !important;
-    --accent-color: #FFE10B !important;
+    --accent-color: #ffe10b !important;
 }
 
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-family: 'Fredoka', sans-serif;
+    font-family: "Fredoka", sans-serif;
 }
 
 html,
@@ -51,7 +51,7 @@ body {
 body {
     color: var(--text-color-rgb);
     position: relative;
-    margin-top: var(--header-height);
+    margin-top: var(--nav-height);
     background-color: rgb(var(--background-color-rgb));
 }
 
@@ -76,20 +76,20 @@ a {
     background-color: var(--secondary-color) !important;
     border: 1px solid var(--secondary-color) !important;
 }
-.brand-btn:hover{
-    background-color: transparent!important;
-    color: var(--primary-color)!important;
+.brand-btn:hover {
+    background-color: transparent !important;
+    color: var(--primary-color) !important;
 }
 .brand-btn-grey:hover {
     background-color: transparent !important;
     color: var(--scondary-color) !important;
 }
 .nav-link {
-    color: var(--primary-color)!important;
-    font-weight: 600!important;
-    font-size: 19px!important;
+    color: var(--primary-color) !important;
+    font-weight: 600 !important;
+    font-size: 19px !important;
     transition: 0.25s ease-in-out;
 }
-.nav-link:hover{
-    color: var(--secondary-color)!important;
+.nav-link:hover {
+    color: var(--secondary-color) !important;
 }

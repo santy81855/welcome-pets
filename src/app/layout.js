@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import './css/style.css'
-import Home from "./home";
+import BootstrapClient from '@/components/Bootstrap/BootstrapClient';
 
 export const metadata = {
     title: 'Welcome Pets',
@@ -13,8 +13,8 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body>
-                <Navbar />
                 {children}
+                <BootstrapClient />
             </body>
         </html>
     );
