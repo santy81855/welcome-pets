@@ -69,6 +69,10 @@ a {
   color: var(--secondary-color) !important;
 }
 
+section {
+  padding: 3.5em 0;
+}
+
 nav {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1647058824);
 }
@@ -122,4 +126,74 @@ main .hero-bg {
 }
 .icon-list a {
   color: #424242 !important;
+}
+
+.process {
+  background-image: url(/images/process/process-bg.png);
+  position: relative;
+}
+.process::before {
+  background-color: rgba(225, 225, 11, 0.4980392157);
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.process .container {
+  position: relative;
+}
+.process .container .icon {
+  background: #FFE10B;
+  border: 2px solid #000;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  margin: auto;
+  font-size: 4em;
+  padding: 20px;
+  border-radius: 50%;
+  display: inline-flex;
+}
+.process .container .process-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  gap: 25px;
+}
+.process .container .process-card h3 {
+  font-weight: 600;
+  color: #424242 !important;
+}
+.process .container .process-card p {
+  font-size: 18px;
+  color: #424242 !important;
+}
+.process .container .process-card a:hover {
+  background-color: #E74B4C !important;
+  color: #fff !important;
+  border-color: #424242 !important;
+}
+
+.about .col-md-4 img {
+  width: 100%;
+  height: 100%;
+}
+.about p {
+  font-size: 20px;
+  line-height: 1.9;
+  text-align: justify;
+}
+.about .col-md-11 {
+  background-color: #F2F2F2;
+  margin: 4em 0 2em 0;
+  border-radius: 10px;
+  box-shadow: -2px 3px 11px -1px rgba(0, 0, 0, 0.231372549);
+}
+.about .col-md-11 h4 {
+  line-height: 2;
+}
+.about .col-md-11 img {
+  left: -15px;
+  position: relative;
 }/*# sourceMappingURL=style.css.map */
