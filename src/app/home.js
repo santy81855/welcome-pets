@@ -1,8 +1,15 @@
-import Navbar from "../components/navbar";
+import Hero from "@/components/hero/hero";
+import Navbar from "../components/navbar/navbar";
+import Process from "@/components/process/process";
+import About from "@/components/about/about";
 
 export default function Home() {
-    // make the first div background color red with bootstrap classes
     return (
-        <h1>Welcome Pets</h1>
-    )
+      <div>
+        <Navbar />
+        <Hero/>
+        <Process/>
+        <About/>
+      </div>
+    );
 }
