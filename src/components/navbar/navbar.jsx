@@ -1,7 +1,12 @@
 import Logo from "../logo/logo";
 import Link from "next/link";
 
-export default function Navbar() {
+import { auth, UserButton } from "@clerk/nextjs";
+
+export default async function Navbar() {
+    // Get the userId from auth() -- if null, the user is not logged in
+    const { userId } = auth();
+
     return (
         <nav className="navbar navbar-expand-lg bg-light">
             <div className="container">
@@ -43,12 +48,18 @@ export default function Navbar() {
                         </li>
                     </ul>
                     <div className="d-flex gap-3">
-                        <Link className="btn brand-btn-grey" href="/sign-in">
-                            Login
-                        </Link>
-                        <Link className="btn brand-btn" href="/sign-up">
-                            Register
-                        </Link>
+                        {userId ? (
+                            <UserButton afterSignOutUrl="/" />
+                        ) : (
+                            <>
+                                <Link className="btn brand-btn-grey" href="/sign-in">
+                                    Login
+                                </Link>
+                                <Link className="btn brand-btn" href="/sign-up">
+                                    Register
+                                </Link>
+                            </>
+                        )}
                     </div>
                 </div>
             </div>
