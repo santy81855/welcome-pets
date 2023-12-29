@@ -19,8 +19,9 @@ model user {
   password        String?
   profilePicture  String?
   role            String 
-  createdDate     DateTime  @db.Date
-  updatedDate     DateTime  @db.Date
+  createdDate     Int
+  updatedDate     Int
+  clerkId         String   @unique
   conversationIDs String[] @db.ObjectId
   conversations   conversation[] @relation(fields: [conversationIDs], references: [id])
   images          image[]
