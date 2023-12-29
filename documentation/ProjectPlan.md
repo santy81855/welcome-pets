@@ -75,6 +75,7 @@ Talking about key features, we can have various features in upcoming version but
 
 -   **Post Table**
     -   PostId (primary key)
+    -   ImageIdArray (array with foreign keys to the user table)
     -   Title
     -   Content
     -   Created Date
