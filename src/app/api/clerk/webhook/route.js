@@ -11,7 +11,6 @@ import { prisma } from "@/lib/prisma";
 export async function POST(request) {
     const WEBHOOK_SECRET = process.env.WEBHOOK_SECRET
     if (!WEBHOOK_SECRET) {
-        console.log("No webhook secret");
         return Response.json({ message: "No webhook secret" });
     }
 
@@ -47,7 +46,6 @@ export async function POST(request) {
             "svix-signature": svix_signature,
         });
     } catch (err) {
-        console.error("Error verifying webhook:", err);
         return new Response("Error occured", {
             status: 400,
         });
@@ -90,6 +88,7 @@ export async function POST(request) {
         return Response.json({ message: "No primary email." });
     }
     const email = primaryEmailObject.email_address;
+    const isVerified = primaryEmailObject.verification.status === 'verified';
     if (!email) {
         return Response.json({ message: "No email address" });
     }
@@ -120,7 +119,8 @@ export async function POST(request) {
                 createdDate: createdAt,
                 updatedDate: createdAt,
                 role: "user",
-                clerkId: clerkId
+                clerkId: clerkId,
+                emailVerified: isVerified,
             }
         });
         if (!newUser) {
