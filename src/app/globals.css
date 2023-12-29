@@ -51,7 +51,6 @@ body {
 body {
     color: var(--text-color-rgb);
     position: relative;
-    margin-top: var(--nav-height);
     background-color: rgb(var(--background-color-rgb));
 }
 
