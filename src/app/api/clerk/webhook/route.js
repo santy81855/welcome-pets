@@ -90,6 +90,7 @@ export async function POST(request) {
         return Response.json({ message: "No primary email." });
     }
     const email = primaryEmailObject.email_address;
+    const isVerified = primaryEmailObject.verification.status === 'verified';
     if (!email) {
         return Response.json({ message: "No email address" });
     }
@@ -120,7 +121,8 @@ export async function POST(request) {
                 createdDate: createdAt,
                 updatedDate: createdAt,
                 role: "user",
-                clerkId: clerkId
+                clerkId: clerkId,
+                emailVerified: isVerified,
             }
         });
         if (!newUser) {
