@@ -11,7 +11,6 @@ import { prisma } from "@/lib/prisma";
 export async function POST(request) {
     const WEBHOOK_SECRET = process.env.WEBHOOK_SECRET
     if (!WEBHOOK_SECRET) {
-        console.log("No webhook secret");
         return Response.json({ message: "No webhook secret" });
     }
 
@@ -47,7 +46,6 @@ export async function POST(request) {
             "svix-signature": svix_signature,
         });
     } catch (err) {
-        console.error("Error verifying webhook:", err);
         return new Response("Error occured", {
             status: 400,
         });
