@@ -30,7 +30,9 @@ export async function POST(request) {
 
     // If there are no headers, error out
     if (!svix_id || !svix_timestamp || !svix_signature) {
-        return Response.json({ message: "Error occurred: No svix headers.", status: 400 });
+        return new Response("Error occured -- no svix headers", {
+            status: 400,
+        });
     }
     // create new Svix webhook instance
     const wh = new Webhook(WEBHOOK_SECRET);
@@ -45,8 +47,10 @@ export async function POST(request) {
             "svix-signature": svix_signature,
         });
     } catch (err) {
-        console.error('Error verifying webhook:', err);
-        return Response.json({ message: "Error occurred.", status: 400 });
+        console.error("Error verifying webhook:", err);
+        return new Response("Error occured", {
+            status: 400,
+        });
     }
 
     if (!type) {
