@@ -1,7 +1,7 @@
 import Logo from "../logo/logo";
 import Link from "next/link";
 
-import { auth, UserButton } from "@clerk/nextjs";
+import { auth, UserButton, SignInButton, SignUpButton } from "@clerk/nextjs";
 
 export default async function Navbar() {
     // Get the userId from auth() -- if null, the user is not logged in
@@ -52,12 +52,8 @@ export default async function Navbar() {
                             <UserButton afterSignOutUrl="/" />
                         ) : (
                             <>
-                                <Link className="btn brand-btn-grey" href="/sign-in">
-                                    Login
-                                </Link>
-                                <Link className="btn brand-btn" href="/sign-up">
-                                    Register
-                                </Link>
+                                <SignInButton className="btn brand-btn-grey" mode="modal">Login</SignInButton>
+                                <SignUpButton className="btn brand-btn" mode="modal">Register</SignUpButton>
                             </>
                         )}
                     </div>
