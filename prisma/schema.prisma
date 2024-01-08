@@ -1,0 +1,78 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+// reference for prisma with mongo many to many https://www.prisma.io/docs/orm/prisma-schema/data-model/relations/many-to-many-relations#mongodb 
+
+// any time the schema is changed need to run `prisma generate` to update the prisma client
+
+model user {
+  id              String    @id @default(auto()) @map("_id") @db.ObjectId
+  username        String    @unique
+  email           String    @unique
+  emailVerified   Boolean   @default(false)
+  password        String?
+  profilePicture  String?
+  role            String 
+  createdDate     Int
+  updatedDate     Int
+  clerkId         String   @unique
+  conversationIDs String[] @db.ObjectId
+  conversations   conversation[] @relation(fields: [conversationIDs], references: [id])
+  images          image[]
+  messagesSent    message[] @relation("Sender")
+  messagesRecived message[] @relation("Recipient")
+  posts           post[]
+}
+
+model conversation {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  subject     String
+  dateCreated DateTime @db.Date
+  dateUpdated DateTime @db.Date
+  userIDs     String[] @db.ObjectId
+  users       user[]   @relation(fields: [userIDs], references: [id])
+  messageIDs  String[] @db.ObjectId
+  messages    message[]
+}
+
+model image {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  description String
+  uploadDate  DateTime @db.Date
+  url         String
+  userID        String   @db.ObjectId
+  user          user     @relation(fields: [userID], references: [id])
+  postId        String   @db.ObjectId
+  post          post     @relation(fields: [postId], references: [id])
+}
+
+model message {
+  id           String   @id @default(auto()) @map("_id") @db.ObjectId
+  content      String
+  conversationID String   @db.ObjectId
+  conversation   conversation @relation(fields: [conversationID], references: [id])
+  recipientID    String   @db.ObjectId
+  recipient       user     @relation("Recipient", fields: [recipientID], references: [id])
+  senderID       String   @db.ObjectId
+  sender         user     @relation("Sender", fields: [senderID], references: [id])
+  sentDate     DateTime @db.Date
+  timestamp    DateTime
+}
+
+model post {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  title       String
+  content     String
+  createdDate DateTime @db.Date
+  updatedDate DateTime @db.Date
+  imageIDs    String[] @db.ObjectId
+  images      image[]
+  userID        String   @db.ObjectId
+  user          user     @relation(fields: [userID], references: [id])
+}

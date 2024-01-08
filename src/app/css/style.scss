@@ -298,3 +298,156 @@ main {
         }
     }
 }
+
+.testimonials {
+    background-color: #ffe30b89;
+    background-image: url(/images/testimonials/testi-bg.png);
+    color: $secondary-color;
+    position: relative;
+    padding: 6em 0;
+
+    p {
+        font-size: 23px;
+    }
+
+    .testi-left,
+    .testi-right {
+        position: absolute;
+        bottom: -120px;
+    }
+
+    .testi-left {
+        left: -120px;
+    }
+
+    .testi-right {
+        right: -120px;
+    }
+
+    .slick-dots li button:before {
+        width: 15px;
+        height: 15px;
+        content: '';
+        background: black;
+        border-radius: 23px;
+    }
+
+    .slick-dots {
+        bottom: -38px;
+        left: 29px;
+    }
+
+    .testi-slider {
+        width: 74%;
+        margin: 2em auto;
+
+        .testi-info {
+            p {
+                font-size: 16px;
+            }
+        }
+
+        img {
+            border-radius: 55px;
+        }
+
+        p {
+            font-size: 20px;
+            line-height: 1.7;
+            font-weight: 500;
+        }
+    }
+}
+
+.partners {
+    padding: 5em 0;
+
+    .partner-box {
+        background-color: $primary-color;
+        padding: 3em;
+        border-radius: 13px;
+
+        .image-box {
+            background: aliceblue;
+            padding: 12px;
+            img {
+                width: 130px;
+            }
+        }
+    }
+}
+
+.cta {
+    padding: 0;
+    margin: 4em 0;
+    position: relative;
+
+    img {
+        position: absolute;
+        bottom: 0;
+        left: 8px;
+    }
+
+    .for-adopters,
+    .for-guardians {
+        display: flex;
+        flex-direction: column;
+        gap: 5em;
+        padding: 3em 6em;
+    }
+
+    h3 {
+        font-size: 3em;
+        font-weight: 500;
+    }
+
+    p {
+        margin: 0;
+        font-size: 25px;
+
+        .before {
+            border-radius: 305px;
+            padding: 0 22px;
+            display: inline-block;
+        }
+    }
+
+    .for-adopters {
+        text-align: left;
+        background-color: $primary-color;
+        color: #fff;
+        align-items: flex-start;
+
+        p {
+            padding-right: 5em;
+
+            .before {
+                background-color: $secondary-color;
+            }
+        }
+    }
+
+    .for-guardians {
+        text-align: right;
+        background-color: $accent-color;
+        color: $secondary-color;
+        align-items: flex-end;
+
+        p {
+            padding-left: 5em;
+
+            .before {
+                background-color: #fff;
+            }
+        }
+    }
+}
+.footer{
+    padding: 0;
+    a{
+        text-decoration: none;
+    }
+    h6{
+        color: $primary-color;
+    }
+}

@@ -1,6 +1,9 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import './css/style.css'
+import './globals.css'
+import { ClerkProvider } from '@clerk/nextjs'
 import BootstrapClient from '@/components/Bootstrap/BootstrapClient';
+import { fontAwesome } from 'fontawesome';
 
 export const metadata = {
     title: 'Welcome Pets',
@@ -11,11 +14,13 @@ export default function RootLayout({
     children,
 }) {
     return (
-        <html lang="en">
-            <body>
-                {children}
-                <BootstrapClient />
-            </body>
-        </html>
+        <ClerkProvider>
+            <html lang="en">
+                <body>
+                    {children}
+                    <BootstrapClient />
+                </body>
+            </html>
+        </ClerkProvider>
     );
 }

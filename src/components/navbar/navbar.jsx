@@ -1,16 +1,17 @@
-"use client";
-
-import BtnGrey from "../buttons/btnGrey";
-import BtnPrimary from "../buttons/btnPrimary";
 import Logo from "../logo/logo";
+import Link from "next/link";
 
-export default function Navbar() {
+import { auth, UserButton } from "@clerk/nextjs";
+
+export default async function Navbar() {
+    // Get the userId from auth() -- if null, the user is not logged in
+    const { userId } = auth();
     return (
         <nav className="navbar navbar-expand-lg bg-light">
             <div className="container">
-                <a className="navbar-brand" href="#">
+                <Link className="navbar-brand" href="/">
                     <Logo />
-                </a>
+                </Link>
                 <button
                     className="navbar-toggler"
                     type="button"
@@ -25,29 +26,39 @@ export default function Navbar() {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                            <a className="nav-link" href="#">
+                            <Link className="nav-link" href="#">
                                 Adopters
-                            </a>
+                            </Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">
+                            <Link className="nav-link" href="#">
                                 Guardians
-                            </a>
+                            </Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">
+                            <Link className="nav-link" href="#">
                                 Help
-                            </a>
+                            </Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">
+                            <Link className="nav-link" href="#">
                                 FAQs
-                            </a>
+                            </Link>
                         </li>
                     </ul>
                     <div className="d-flex gap-3">
-                        <BtnGrey text="Login" />
-                        <BtnPrimary text="Register" />
+                        {userId ? (
+                            <UserButton afterSignOutUrl="/" />
+                        ) : (
+                            <>
+                                <Link className="btn brand-btn-grey" href="/sign-in">
+                                    Login
+                                </Link>
+                                <Link className="btn brand-btn" href="/sign-up">
+                                    Register
+                                </Link>
+                            </>
+                        )}
                     </div>
                 </div>
             </div>

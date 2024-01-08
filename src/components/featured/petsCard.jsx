@@ -8,6 +8,7 @@ export default function PetsCard(props){
         <p className="mb-0 age">{props.breed}/{props.gender}/{props.age} Years</p>
         <div className="info-box">
           <span>Last Vet Visit : {props.lastVetVisit}</span>
+          <br></br>
           <span>Needs New Home By: {props.newHomeDate}</span>
         </div>
         <p className="pet-location">{props.petLocation}</p>
