@@ -1,6 +1,6 @@
 export default function BtnSection(props){
     const style = {
-        borderRadius: props.borderRadius,
+        borderRadius: "9px",
         border: props.border,
         background: props.background,
         boxShadow: props.boxShadow,

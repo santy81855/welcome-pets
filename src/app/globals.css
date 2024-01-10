@@ -92,6 +92,7 @@ a {
 .nav-link:hover {
     color: var(--secondary-color) !important;
 }
+
 /* Start classes related to the clerk authentication modal */
 /*Remove watermark*/
 .cl-internal-b3fm6y {
@@ -123,3 +124,9 @@ a {
 .cl-footer {
 }
 /* End classes related to the clerk authentication modal */
+
+.py-5 {
+    padding-top: 4rem !important;
+    padding-bottom: 4rem !important;
+}
+

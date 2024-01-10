@@ -192,8 +192,194 @@ main .hero-bg {
 }
 .about .col-md-11 h4 {
   line-height: 2;
+  color: #424242 !important;
 }
 .about .col-md-11 img {
   left: -15px;
   position: relative;
+}
+
+.featured-pets {
+  background-color: #E74B4C !important;
+  position: relative;
+}
+.featured-pets .row {
+  position: relative;
+  z-index: 111;
+}
+.featured-pets .btn:hover {
+  background-color: #424242 !important;
+  color: #fff !important;
+  border-color: #fff;
+}
+.featured-pets .fp-bg-top {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  height: auto;
+}
+.featured-pets .fp-bg-bottom {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  height: auto;
+  right: 0;
+  transform: rotate(180deg);
+}
+.featured-pets .pets-card {
+  border: 2px solid #424242;
+  background: #FFF;
+  box-shadow: 2px 4px 17px 0px rgba(66, 66, 66, 0.36);
+  background-color: #fff;
+  border-radius: 9px;
+  padding: 10px;
+  width: 30%;
+  color: #424242 !important;
+  cursor: pointer;
+}
+.featured-pets .pets-card img {
+  width: 100%;
+  height: auto;
+}
+.featured-pets .pets-card .info-box {
+  background-color: #FFE10B !important;
+  padding: 11px;
+  margin: 12px 11px;
+  border-radius: 9px;
+}
+.featured-pets .pets-card h3 {
+  margin: 14px 0;
+}
+.featured-pets .pets-card .age {
+  font-size: 19px;
+  font-weight: 400;
+}
+
+.testimonials {
+  background-color: rgba(255, 227, 11, 0.537254902);
+  background-image: url(/images/testimonials/testi-bg.png);
+  color: #424242 !important;
+  position: relative;
+  padding: 6em 0;
+}
+.testimonials p {
+  font-size: 23px;
+}
+.testimonials .testi-left,
+.testimonials .testi-right {
+  position: absolute;
+  bottom: -120px;
+}
+.testimonials .testi-left {
+  left: -120px;
+}
+.testimonials .testi-right {
+  right: -120px;
+}
+.testimonials .slick-dots li button:before {
+  width: 15px;
+  height: 15px;
+  content: "";
+  background: black;
+  border-radius: 23px;
+}
+.testimonials .slick-dots {
+  bottom: -38px;
+  left: 29px;
+}
+.testimonials .testi-slider {
+  width: 74%;
+  margin: 2em auto;
+}
+.testimonials .testi-slider .testi-info p {
+  font-size: 16px;
+}
+.testimonials .testi-slider img {
+  border-radius: 55px;
+}
+.testimonials .testi-slider p {
+  font-size: 20px;
+  line-height: 1.7;
+  font-weight: 500;
+}
+
+.partners {
+  padding: 5em 0;
+}
+.partners .partner-box {
+  background-color: #E74B4C !important;
+  padding: 3em;
+  border-radius: 13px;
+}
+.partners .partner-box .image-box {
+  background: aliceblue;
+  padding: 12px;
+}
+.partners .partner-box .image-box img {
+  width: 130px;
+}
+
+.cta {
+  padding: 0;
+  margin: 4em 0;
+  position: relative;
+}
+.cta img {
+  position: absolute;
+  bottom: 0;
+  left: 8px;
+}
+.cta .for-adopters,
+.cta .for-guardians {
+  display: flex;
+  flex-direction: column;
+  gap: 5em;
+  padding: 3em 6em;
+}
+.cta h3 {
+  font-size: 3em;
+  font-weight: 500;
+}
+.cta p {
+  margin: 0;
+  font-size: 25px;
+}
+.cta p .before {
+  border-radius: 305px;
+  padding: 0 22px;
+  display: inline-block;
+}
+.cta .for-adopters {
+  text-align: left;
+  background-color: #E74B4C !important;
+  color: #fff;
+  align-items: flex-start;
+}
+.cta .for-adopters p {
+  padding-right: 5em;
+}
+.cta .for-adopters p .before {
+  background-color: #424242 !important;
+}
+.cta .for-guardians {
+  text-align: right;
+  background-color: #FFE10B !important;
+  color: #424242 !important;
+  align-items: flex-end;
+}
+.cta .for-guardians p {
+  padding-left: 5em;
+}
+.cta .for-guardians p .before {
+  background-color: #fff;
+}
+
+.footer {
+  padding: 0;
+}
+.footer a {
+  text-decoration: none;
+}
+.footer h6 {
+  color: #E74B4C !important;
 }/*# sourceMappingURL=style.css.map */
