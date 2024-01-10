@@ -6,7 +6,6 @@ import { auth, UserButton, SignInButton, SignUpButton } from "@clerk/nextjs";
 export default async function Navbar() {
     // Get the userId from auth() -- if null, the user is not logged in
     const { userId } = auth();
-
     return (
         <nav className="navbar navbar-expand-lg bg-light">
             <div className="container">

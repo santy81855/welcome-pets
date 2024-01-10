@@ -2,7 +2,6 @@ import BtnSection from "../buttons/btnSection";
 import ProcessIcon from "../iconsList/processIcon";
 export default function ProcessCard(props){
     const btnStyle = {
-      borderRadius: "9px",
       border: "2px solid #E74B4C",
       background: "#FFF",
       color: "#E74B4C",

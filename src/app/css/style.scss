@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap");
 
-$primary-color: #E74B4C !important;
+$primary-color: #e74b4c !important;
 $secondary-color: #424242 !important;
-$accent-color: #FFE10B !important;
+$accent-color: #ffe10b !important;
 
 :root {
     --primary-color: #{$primary-color};
@@ -14,7 +14,7 @@ $accent-color: #FFE10B !important;
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-family: 'Fredoka', sans-serif;
+    font-family: "Fredoka", sans-serif;
 }
 
 html,
@@ -127,7 +127,7 @@ main {
     }
 
     &:hover {
-        background-color: #E74B4C !important;
+        background-color: #e74b4c !important;
         color: #fff !important;
     }
 }
@@ -150,7 +150,7 @@ main {
 
     &::before {
         background-color: #e1e10b7f;
-        content: '';
+        content: "";
         width: 100%;
         height: 100%;
         position: absolute;
@@ -162,7 +162,7 @@ main {
         position: relative;
 
         .icon {
-            background: #FFE10B;
+            background: #ffe10b;
             border: 2px solid #000;
             filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
             margin: auto;
@@ -201,11 +201,11 @@ main {
 }
 
 .about {
-    .col-md-4{
+    .col-md-4 {
         img {
-                width: 100%;
-                height: 100%;
-            }
+            width: 100%;
+            height: 100%;
+        }
     }
 
     p {
@@ -215,16 +215,239 @@ main {
     }
 
     .col-md-11 {
-        background-color: #F2F2F2;
+        background-color: #f2f2f2;
         margin: 4em 0 2em 0;
         border-radius: 10px;
         box-shadow: -2px 3px 11px -1px #0000003b;
-        h4{
+
+        h4 {
             line-height: 2;
+            color: $secondary-color;
         }
-        img{
+
+        img {
             left: -15px;
             position: relative;
         }
+    }
+}
+
+.featured-pets {
+    background-color: $primary-color;
+    position: relative;
+
+    .row {
+        position: relative;
+        z-index: 111;
+    }
+
+    .btn {
+        &:hover {
+            background-color: $secondary-color;
+            color: #fff !important;
+            border-color: #fff;
+        }
+    }
+
+    .fp-bg-top {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        height: auto;
+    }
+
+    .fp-bg-bottom {
+        position: absolute;
+        z-index: 1;
+        bottom: 0;
+        height: auto;
+        right: 0;
+        transform: rotate(180deg);
+    }
+
+    .pets-card {
+        border: 2px solid #424242;
+        background: #fff;
+        box-shadow: 2px 4px 17px 0px rgba(66, 66, 66, 0.36);
+        background-color: #fff;
+        border-radius: 9px;
+        padding: 10px;
+        width: 30%;
+        color: $secondary-color;
+        cursor: pointer;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        .info-box {
+            background-color: $accent-color;
+            padding: 11px;
+            margin: 12px 11px;
+            border-radius: 9px;
+        }
+
+        h3 {
+            margin: 14px 0;
+        }
+
+        .age {
+            font-size: 19px;
+            font-weight: 400;
+        }
+    }
+}
+
+.testimonials {
+    background-color: #ffe30b89;
+    background-image: url(/images/testimonials/testi-bg.png);
+    color: $secondary-color;
+    position: relative;
+    padding: 6em 0;
+
+    p {
+        font-size: 23px;
+    }
+
+    .testi-left,
+    .testi-right {
+        position: absolute;
+        bottom: -120px;
+    }
+
+    .testi-left {
+        left: -120px;
+    }
+
+    .testi-right {
+        right: -120px;
+    }
+
+    .slick-dots li button:before {
+        width: 15px;
+        height: 15px;
+        content: "";
+        background: black;
+        border-radius: 23px;
+    }
+
+    .slick-dots {
+        bottom: -38px;
+        left: 29px;
+    }
+
+    .testi-slider {
+        width: 74%;
+        margin: 2em auto;
+
+        .testi-info {
+            p {
+                font-size: 16px;
+            }
+        }
+
+        img {
+            border-radius: 55px;
+        }
+
+        p {
+            font-size: 20px;
+            line-height: 1.7;
+            font-weight: 500;
+        }
+    }
+}
+
+.partners {
+    padding: 5em 0;
+
+    .partner-box {
+        background-color: $primary-color;
+        padding: 3em;
+        border-radius: 13px;
+
+        .image-box {
+            background: aliceblue;
+            padding: 12px;
+            img {
+                width: 130px;
+            }
+        }
+    }
+}
+
+.cta {
+    padding: 0;
+    margin: 4em 0;
+    position: relative;
+
+    img {
+        position: absolute;
+        bottom: 0;
+        left: 8px;
+    }
+
+    .for-adopters,
+    .for-guardians {
+        display: flex;
+        flex-direction: column;
+        gap: 5em;
+        padding: 3em 6em;
+    }
+
+    h3 {
+        font-size: 3em;
+        font-weight: 500;
+    }
+
+    p {
+        margin: 0;
+        font-size: 25px;
+
+        .before {
+            border-radius: 305px;
+            padding: 0 22px;
+            display: inline-block;
+        }
+    }
+
+    .for-adopters {
+        text-align: left;
+        background-color: $primary-color;
+        color: #fff;
+        align-items: flex-start;
+
+        p {
+            padding-right: 5em;
+
+            .before {
+                background-color: $secondary-color;
+            }
+        }
+    }
+
+    .for-guardians {
+        text-align: right;
+        background-color: $accent-color;
+        color: $secondary-color;
+        align-items: flex-end;
+
+        p {
+            padding-left: 5em;
+
+            .before {
+                background-color: #fff;
+            }
+        }
+    }
+}
+.footer {
+    padding: 0;
+    a {
+        text-decoration: none;
+    }
+    h6 {
+        color: $primary-color;
     }
 }

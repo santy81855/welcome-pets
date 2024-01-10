@@ -3,6 +3,7 @@ import './css/style.css'
 import './globals.css'
 import { ClerkProvider } from '@clerk/nextjs'
 import BootstrapClient from '@/components/Bootstrap/BootstrapClient';
+import { fontAwesome } from 'fontawesome';
 
 export const metadata = {
     title: 'Welcome Pets',
