@@ -92,7 +92,41 @@ a {
 .nav-link:hover {
     color: var(--secondary-color) !important;
 }
+
+/* Start classes related to the clerk authentication modal */
+/*Remove watermark*/
+.cl-internal-b3fm6y {
+    display: none;
+}
+.cl-card {
+    /* example to place background image on login modal */
+    /* background-image: url("/images/auth/auth-card-background.jpg");
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat; */
+}
+/* close button */
+.cl-modalCloseButton {
+}
+/* Top logo */
+.cl-logoBox {
+}
+/*Top text*/
+.cl-header {
+}
+/*google button class*/
+.cl-socialButtonsBlockButton__google {
+}
+/*user input section*/
+.cl-main {
+}
+/*footer section*/
+.cl-footer {
+}
+/* End classes related to the clerk authentication modal */
+
 .py-5 {
     padding-top: 4rem !important;
     padding-bottom: 4rem !important;
 }
+
