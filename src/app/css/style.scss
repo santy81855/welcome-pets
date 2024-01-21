@@ -264,7 +264,14 @@ main {
         right: 0;
         transform: rotate(180deg);
     }
-
+    .slick-slider{
+        z-index: 11;
+        margin: 3em 0;
+    }
+    .btn{
+        z-index: 1111;
+        position: relative;
+    }
     .pets-card {
         border: 2px solid #424242;
         background: #FFF;
@@ -272,9 +279,10 @@ main {
         background-color: #fff;
         border-radius: 9px;
         padding: 10px;
-        width: 30%;
+        width: 90%;
         color: $secondary-color;
         cursor: pointer;
+        margin: auto;
 
         img {
             width: 100%;
@@ -449,5 +457,68 @@ main {
     }
     h6{
         color: $primary-color;
+    }
+}
+@media(max-width:790px){
+    nav{
+        padding: 8px 3em;
+    }
+    main{
+        .container{
+            padding: 3em;
+        }
+        h1{
+            font-size: 3em;
+        }
+        p{
+            font-size: 18px;
+        }
+        .col-md-5{
+            text-align: center;
+        }
+    }
+    .about{
+        .row{
+            padding: 3em;
+            .col-md-11{
+                h4{
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+    .testimonials{
+        .testi-left,.testi-right{
+            display: none;
+        }
+    }
+    .partners{
+        .partner-box{
+            width: 85%;
+            margin: auto!important;
+            .image-box{
+                gap: 4em!important;
+            }
+        }
+    }
+    .cta{
+        .for-adopters, .for-guardians{
+            padding: 3em;
+            gap: 3em;
+            p{
+                font-size: 18px;
+                padding: 0;
+            }
+        }
+        img{
+            bottom: 42%;
+            width: 56%;
+            right: -1px;
+            border: 1px solid #000;
+            height: auto;
+            border-radius: 50%;
+            background: blanchedalmond;
+            left: unset;
+        }
     }
 }

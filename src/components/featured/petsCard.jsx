@@ -2,7 +2,7 @@ import Image from "next/image"
 
 export default function PetsCard(props){
     return (
-      <div className="pets-card col-md-4 gap-2">
+      <div className="pets-card gap-2">
         <Image src={props.img} alt={props.name} width={400} height={300} />
         <h3>{props.name}</h3>
         <p className="mb-0 age">{props.breed}/{props.gender}/{props.age} Years</p>

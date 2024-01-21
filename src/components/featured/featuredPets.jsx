@@ -1,3 +1,8 @@
+"use client";
+
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import BtnSection from "../buttons/btnSection";
 import SubHeading from "../headings/subHeading";
 import PetsCard from "./petsCard";
@@ -37,7 +42,19 @@ const petsData = [
     petLocation: "Countryside Animal Rescue",
     nearBy: "Rural Area",
   },
+  {
+    img: "/images/featured/fp2.svg",
+    name: "Mittens",
+    breed: "Domestic Shorthair",
+    gender: "Female",
+    age: 2,
+    lastVetVisit: "2022-07-20",
+    newHomeDate: "2022-08-15",
+    petLocation: "Happy Paws Adoption Center",
+    nearBy: "Happyville",
+  },
 ];
+
 
 export default function FeaturedPets() {
   const btnStyle = {
@@ -45,6 +62,25 @@ export default function FeaturedPets() {
     background: "#FFF",
     color: "#E74B4C",
     boxShadow: "0px 4px 4px 0px rgba(0, 0, 0, 0.59)",
+  };
+
+  const sliderSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 790,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
+    ]
   };
 
   return (
@@ -58,11 +94,14 @@ export default function FeaturedPets() {
       />
       <div className="container text-center">
         <SubHeading text="Featured Pets" textAlign="center" color="#fff" />
-        <div className="row align-item-center justify-content-between py-5">
+        <Slider {...sliderSettings}>
           {petsData.map((pet, index) => (
-            <PetsCard key={index} {...pet} />
+            <div key={index}>
+              <PetsCard {...pet} />
+            </div>
           ))}
-        </div>
+        </Slider>
+
         <BtnSection text="Browse More Pets" {...btnStyle} />
       </div>
       <Image
