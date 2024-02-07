@@ -1,8 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap');
 
-$primary-color: #e74b4c !important;
+$primary-color: #E74B4C !important;
 $secondary-color: #424242 !important;
-$accent-color: #ffe10b !important;
+$accent-color: #FFE10B !important;
 
 :root {
     --primary-color: #{$primary-color};
@@ -14,7 +14,7 @@ $accent-color: #ffe10b !important;
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-family: "Fredoka", sans-serif;
+    font-family: 'Fredoka', sans-serif;
 }
 
 html,
@@ -127,7 +127,7 @@ main {
     }
 
     &:hover {
-        background-color: #e74b4c !important;
+        background-color: #E74B4C !important;
         color: #fff !important;
     }
 }
@@ -150,7 +150,7 @@ main {
 
     &::before {
         background-color: #e1e10b7f;
-        content: "";
+        content: '';
         width: 100%;
         height: 100%;
         position: absolute;
@@ -162,7 +162,7 @@ main {
         position: relative;
 
         .icon {
-            background: #ffe10b;
+            background: #FFE10B;
             border: 2px solid #000;
             filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
             margin: auto;
@@ -215,7 +215,7 @@ main {
     }
 
     .col-md-11 {
-        background-color: #f2f2f2;
+        background-color: #F2F2F2;
         margin: 4em 0 2em 0;
         border-radius: 10px;
         box-shadow: -2px 3px 11px -1px #0000003b;
@@ -274,7 +274,7 @@ main {
     }
     .pets-card {
         border: 2px solid #424242;
-        background: #fff;
+        background: #FFF;
         box-shadow: 2px 4px 17px 0px rgba(66, 66, 66, 0.36);
         background-color: #fff;
         border-radius: 9px;
@@ -335,7 +335,7 @@ main {
     .slick-dots li button:before {
         width: 15px;
         height: 15px;
-        content: "";
+        content: '';
         background: black;
         border-radius: 23px;
     }
@@ -450,16 +450,15 @@ main {
         }
     }
 }
-.footer {
+.footer{
     padding: 0;
-    a {
+    a{
         text-decoration: none;
     }
-    h6 {
+    h6{
         color: $primary-color;
     }
 }
-
 @media(max-width:790px){
     nav{
         padding: 8px 3em;
@@ -523,4 +522,3 @@ main {
         }
     }
 }
-

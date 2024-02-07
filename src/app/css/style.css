@@ -1,229 +1,230 @@
 @import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap");
 :root {
-    --primary-color: #e74b4c !important;
-    --secondary-color: #424242 !important;
-    --accent-color: #ffe10b !important;
+  --primary-color: #E74B4C !important;
+  --secondary-color: #424242 !important;
+  --accent-color: #FFE10B !important;
 }
 
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Fredoka", sans-serif;
 }
 
 html,
 body {
-    max-width: 100vw;
-    overflow-x: hidden;
-    height: 100%;
-    max-height: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  height: 100%;
+  max-height: 100%;
 }
 
 body {
-    color: var(--text-color-rgb);
-    position: relative;
-    margin-top: var(--header-height);
-    background-color: rgb(var(--background-color-rgb));
+  color: var(--text-color-rgb);
+  position: relative;
+  margin-top: var(--header-height);
+  background-color: rgb(var(--background-color-rgb));
 }
 
 a {
-    color: inherit;
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
 .brand-btn,
 .brand-btn-grey {
-    color: #fff !important;
-    font-weight: 400 !important;
-    font-size: 17px !important;
+  color: #fff !important;
+  font-weight: 400 !important;
+  font-size: 17px !important;
 }
 .brand-btn.brand-btn,
 .brand-btn-grey.brand-btn {
-    background-color: var(--primary-color) !important;
-    border: 1px solid var(--primary-color) !important;
+  background-color: var(--primary-color) !important;
+  border: 1px solid var(--primary-color) !important;
 }
 .brand-btn.brand-btn:hover,
 .brand-btn-grey.brand-btn:hover {
-    background-color: transparent !important;
-    color: var(--primary-color) !important;
+  background-color: transparent !important;
+  color: var(--primary-color) !important;
 }
 .brand-btn.brand-btn-grey,
 .brand-btn-grey.brand-btn-grey {
-    background-color: var(--secondary-color) !important;
-    border: 1px solid var(--secondary-color) !important;
+  background-color: var(--secondary-color) !important;
+  border: 1px solid var(--secondary-color) !important;
 }
 .brand-btn.brand-btn-grey:hover,
 .brand-btn-grey.brand-btn-grey:hover {
-    background-color: transparent !important;
-    color: var(--secondary-color) !important;
+  background-color: transparent !important;
+  color: var(--secondary-color) !important;
 }
 
 .nav-link {
-    color: var(--primary-color) !important;
-    font-weight: 600 !important;
-    font-size: 19px !important;
-    transition: 0.25s ease-in-out;
+  color: var(--primary-color) !important;
+  font-weight: 600 !important;
+  font-size: 19px !important;
+  transition: 0.25s ease-in-out;
 }
 .nav-link:hover {
-    color: var(--secondary-color) !important;
+  color: var(--secondary-color) !important;
 }
 
 section {
-    padding: 3.5em 0;
+  padding: 3.5em 0;
 }
 
 nav {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1647058824);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1647058824);
 }
 
 main {
-    color: #424242 !important;
+  color: #424242 !important;
 }
 main .container {
-    padding: 3em 0;
+  padding: 3em 0;
 }
 main .hero-img {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 main h1 {
-    font-size: 4.2em;
-    font-weight: 700;
+  font-size: 4.2em;
+  font-weight: 700;
 }
 main p {
-    font-size: 21px;
+  font-size: 21px;
 }
 main .col-md-6 {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-    align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: flex-start;
 }
 main .hero-bg {
-    background-color: #e74b4c !important;
-    background-image: url(/images/hero/hero-bg.svg);
-    width: 100%;
-    height: 35vh;
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-color: #E74B4C !important;
+  background-image: url(/images/hero/hero-bg.svg);
+  width: 100%;
+  height: 35vh;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .btn-hero img {
-    margin-left: 12px;
+  margin-left: 12px;
 }
 .btn-hero:hover {
-    background-color: #e74b4c !important;
-    color: #fff !important;
+  background-color: #E74B4C !important;
+  color: #fff !important;
 }
 
 .icon-list {
-    font-size: 28px;
-    display: flex;
-    align-items: center;
-    gap: 18px;
-    opacity: 0.7;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  opacity: 0.7;
 }
 .icon-list a {
-    color: #424242 !important;
+  color: #424242 !important;
 }
 
 .process {
-    background-image: url(/images/process/process-bg.png);
-    position: relative;
+  background-image: url(/images/process/process-bg.png);
+  position: relative;
 }
 .process::before {
-    background-color: rgba(225, 225, 11, 0.4980392157);
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
+  background-color: rgba(225, 225, 11, 0.4980392157);
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .process .container {
-    position: relative;
+  position: relative;
 }
 .process .container .icon {
-    background: #ffe10b;
-    border: 2px solid #000;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    margin: auto;
-    font-size: 4em;
-    padding: 20px;
-    border-radius: 50%;
-    display: inline-flex;
+  background: #FFE10B;
+  border: 2px solid #000;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  margin: auto;
+  font-size: 4em;
+  padding: 20px;
+  border-radius: 50%;
+  display: inline-flex;
 }
 .process .container .process-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 30px;
-    gap: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  gap: 25px;
 }
 .process .container .process-card h3 {
-    font-weight: 600;
-    color: #424242 !important;
+  font-weight: 600;
+  color: #424242 !important;
 }
 .process .container .process-card p {
-    font-size: 18px;
-    color: #424242 !important;
+  font-size: 18px;
+  color: #424242 !important;
 }
 .process .container .process-card a:hover {
-    background-color: #e74b4c !important;
-    color: #fff !important;
-    border-color: #424242 !important;
+  background-color: #E74B4C !important;
+  color: #fff !important;
+  border-color: #424242 !important;
 }
 
 .about .col-md-4 img {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 .about p {
-    font-size: 20px;
-    line-height: 1.9;
-    text-align: justify;
+  font-size: 20px;
+  line-height: 1.9;
+  text-align: justify;
 }
 .about .col-md-11 {
-    background-color: #f2f2f2;
-    margin: 4em 0 2em 0;
-    border-radius: 10px;
-    box-shadow: -2px 3px 11px -1px rgba(0, 0, 0, 0.231372549);
+  background-color: #F2F2F2;
+  margin: 4em 0 2em 0;
+  border-radius: 10px;
+  box-shadow: -2px 3px 11px -1px rgba(0, 0, 0, 0.231372549);
 }
 .about .col-md-11 h4 {
-    line-height: 2;
-    color: #424242 !important;
+  line-height: 2;
+  color: #424242 !important;
 }
 .about .col-md-11 img {
-    left: -15px;
-    position: relative;
+  left: -15px;
+  position: relative;
 }
 
 .featured-pets {
-    background-color: #e74b4c !important;
-    position: relative;
+  background-color: #E74B4C !important;
+  position: relative;
 }
 .featured-pets .row {
-    position: relative;
-    z-index: 111;
+  position: relative;
+  z-index: 111;
 }
 .featured-pets .btn:hover {
-    background-color: #424242 !important;
-    color: #fff !important;
-    border-color: #fff;
+  background-color: #424242 !important;
+  color: #fff !important;
+  border-color: #fff;
 }
 .featured-pets .fp-bg-top {
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    height: auto;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  height: auto;
 }
 .featured-pets .fp-bg-bottom {
-    position: absolute;
-    z-index: 1;
-    bottom: 0;
-    height: auto;
-    right: 0;
-    transform: rotate(180deg);
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  height: auto;
+  right: 0;
+  transform: rotate(180deg);
 }
 .featured-pets .slick-slider {
   z-index: 11;
@@ -246,147 +247,147 @@ main .hero-bg {
   margin: auto;
 }
 .featured-pets .pets-card img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 .featured-pets .pets-card .info-box {
-    background-color: #ffe10b !important;
-    padding: 11px;
-    margin: 12px 11px;
-    border-radius: 9px;
+  background-color: #FFE10B !important;
+  padding: 11px;
+  margin: 12px 11px;
+  border-radius: 9px;
 }
 .featured-pets .pets-card h3 {
-    margin: 14px 0;
+  margin: 14px 0;
 }
 .featured-pets .pets-card .age {
-    font-size: 19px;
-    font-weight: 400;
+  font-size: 19px;
+  font-weight: 400;
 }
 
 .testimonials {
-    background-color: rgba(255, 227, 11, 0.537254902);
-    background-image: url(/images/testimonials/testi-bg.png);
-    color: #424242 !important;
-    position: relative;
-    padding: 6em 0;
+  background-color: rgba(255, 227, 11, 0.537254902);
+  background-image: url(/images/testimonials/testi-bg.png);
+  color: #424242 !important;
+  position: relative;
+  padding: 6em 0;
 }
 .testimonials p {
-    font-size: 23px;
+  font-size: 23px;
 }
 .testimonials .testi-left,
 .testimonials .testi-right {
-    position: absolute;
-    bottom: -120px;
+  position: absolute;
+  bottom: -120px;
 }
 .testimonials .testi-left {
-    left: -120px;
+  left: -120px;
 }
 .testimonials .testi-right {
-    right: -120px;
+  right: -120px;
 }
 .testimonials .slick-dots li button:before {
-    width: 15px;
-    height: 15px;
-    content: "";
-    background: black;
-    border-radius: 23px;
+  width: 15px;
+  height: 15px;
+  content: "";
+  background: black;
+  border-radius: 23px;
 }
 .testimonials .slick-dots {
-    bottom: -38px;
-    left: 29px;
+  bottom: -38px;
+  left: 29px;
 }
 .testimonials .testi-slider {
-    width: 74%;
-    margin: 2em auto;
+  width: 74%;
+  margin: 2em auto;
 }
 .testimonials .testi-slider .testi-info p {
-    font-size: 16px;
+  font-size: 16px;
 }
 .testimonials .testi-slider img {
-    border-radius: 55px;
+  border-radius: 55px;
 }
 .testimonials .testi-slider p {
-    font-size: 20px;
-    line-height: 1.7;
-    font-weight: 500;
+  font-size: 20px;
+  line-height: 1.7;
+  font-weight: 500;
 }
 
 .partners {
-    padding: 5em 0;
+  padding: 5em 0;
 }
 .partners .partner-box {
-    background-color: #e74b4c !important;
-    padding: 3em;
-    border-radius: 13px;
+  background-color: #E74B4C !important;
+  padding: 3em;
+  border-radius: 13px;
 }
 .partners .partner-box .image-box {
-    background: aliceblue;
-    padding: 12px;
+  background: aliceblue;
+  padding: 12px;
 }
 .partners .partner-box .image-box img {
-    width: 130px;
+  width: 130px;
 }
 
 .cta {
-    padding: 0;
-    margin: 4em 0;
-    position: relative;
+  padding: 0;
+  margin: 4em 0;
+  position: relative;
 }
 .cta img {
-    position: absolute;
-    bottom: 0;
-    left: 8px;
+  position: absolute;
+  bottom: 0;
+  left: 8px;
 }
 .cta .for-adopters,
 .cta .for-guardians {
-    display: flex;
-    flex-direction: column;
-    gap: 5em;
-    padding: 3em 6em;
+  display: flex;
+  flex-direction: column;
+  gap: 5em;
+  padding: 3em 6em;
 }
 .cta h3 {
-    font-size: 3em;
-    font-weight: 500;
+  font-size: 3em;
+  font-weight: 500;
 }
 .cta p {
-    margin: 0;
-    font-size: 25px;
+  margin: 0;
+  font-size: 25px;
 }
 .cta p .before {
-    border-radius: 305px;
-    padding: 0 22px;
-    display: inline-block;
+  border-radius: 305px;
+  padding: 0 22px;
+  display: inline-block;
 }
 .cta .for-adopters {
-    text-align: left;
-    background-color: #e74b4c !important;
-    color: #fff;
-    align-items: flex-start;
+  text-align: left;
+  background-color: #E74B4C !important;
+  color: #fff;
+  align-items: flex-start;
 }
 .cta .for-adopters p {
-    padding-right: 5em;
+  padding-right: 5em;
 }
 .cta .for-adopters p .before {
-    background-color: #424242 !important;
+  background-color: #424242 !important;
 }
 .cta .for-guardians {
-    text-align: right;
-    background-color: #ffe10b !important;
-    color: #424242 !important;
-    align-items: flex-end;
+  text-align: right;
+  background-color: #FFE10B !important;
+  color: #424242 !important;
+  align-items: flex-end;
 }
 .cta .for-guardians p {
-    padding-left: 5em;
+  padding-left: 5em;
 }
 .cta .for-guardians p .before {
-    background-color: #fff;
+  background-color: #fff;
 }
 
 .footer {
-    padding: 0;
+  padding: 0;
 }
 .footer a {
-    text-decoration: none;
+  text-decoration: none;
 }
 .footer h6 {
   color: #E74B4C !important;

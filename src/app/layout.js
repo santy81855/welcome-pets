@@ -4,9 +4,6 @@ import './globals.css'
 import { ClerkProvider } from '@clerk/nextjs'
 import BootstrapClient from '@/components/Bootstrap/BootstrapClient';
 import { fontAwesome } from 'fontawesome';
-import { Fredoka } from "next/font/google";
-
-const fredoka = Fredoka({ subsets: ['latin'] });
 
 export const metadata = {
     title: 'Welcome Pets',
@@ -19,7 +16,7 @@ export default function RootLayout({
     return (
         <ClerkProvider>
             <html lang="en">
-                <body className={fredoka.className}>
+                <body>
                     {children}
                     <BootstrapClient />
                 </body>
