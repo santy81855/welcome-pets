@@ -11,5 +11,6 @@ export default function PetsCard(props) {
           <br></br>
           <span>Needs New Home By: {props.newHomeDate}</span>
         </div>
+      </div>
     );
 }
