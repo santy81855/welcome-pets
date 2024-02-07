@@ -8,7 +8,6 @@ import Partners from "@/components/partners/partners";
 import CTA from "@/components/cta/callToAction";
 import Footer from "@/components/footer/footer";
 
-
 export default function Home() {
     // make the first div background color red with bootstrap classes
     return (
@@ -17,11 +16,11 @@ export default function Home() {
             <Hero />
             <Process />
             <About />
-            <FeaturedPets/>
-            <Testimonials/>
-            <Partners/>
-            <CTA/>
-            <Footer/>
+            <FeaturedPets />
+            <Testimonials />
+            <Partners />
+            <CTA />
+            <Footer />
         </>
     )
 }

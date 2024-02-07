@@ -1,6 +1,6 @@
 import Image from "next/image"
 
-export default function PetsCard(props){
+export default function PetsCard(props) {
     return (
       <div className="pets-card gap-2">
         <Image src={props.img} alt={props.name} width={400} height={300} />
@@ -11,8 +11,6 @@ export default function PetsCard(props){
           <br></br>
           <span>Needs New Home By: {props.newHomeDate}</span>
         </div>
-        <p className="pet-location">{props.petLocation}</p>
-        <p className="nearby">{props.nearBy}</p>
       </div>
     );
 }
